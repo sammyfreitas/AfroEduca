@@ -1,0 +1,139 @@
+/* -------------------------------------------
+   AfroEduca Hub — style.css
+   Paleta: amarelo-ouro #FFB300, marrom #4B2E05,
+           laranja #D86B00, preto #111, bege #FFF8E1
+   Fonte: Poppins
+   ------------------------------------------- */
+
+:root{
+  --gold: #FFB300;
+  --brown: #4B2E05;
+  --orange: #D86B00;
+  --black: #111111;
+  --beige: #FFF8E1;
+  --white: #ffffff;
+  --muted: #6b6b6b;
+  --shadow: 0 10px 30px rgba(11,11,11,0.08);
+  --container: 1100px;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--beige);
+  color: var(--black);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* utility */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px;}
+.sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Header */
+header{background: linear-gradient(90deg,var(--brown), #5a2a09);padding:14px 0;position:sticky;top:0;z-index:60;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;color:var(--gold);font-weight:700;font-size:1.1rem}
+.logo-img{width:48px;height:48px;object-fit:contain;border-radius:8px;background:var(--white);padding:4px}
+.nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--gold);font-weight:600;letter-spacing:0.2px}
+.nav-links a:hover{color:var(--white);opacity:0.95;}
+
+/* Hero / Capa */
+.hero{padding:48px 0 60px}
+.hero-box{
+  background: linear-gradient(135deg, rgba(255,179,0,0.08), rgba(216,107,0,0.04));
+  border-radius:18px;padding:28px;display:flex;align-items:center;gap:28px;box-shadow:var(--shadow)
+}
+.hero-left{flex:0 0 160px;display:flex;align-items:center;justify-content:center}
+.hero-logo{width:140px;height:140px;object-fit:contain;border-radius:14px;background:var(--white);padding:8px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.hero-right{flex:1}
+.hero h1{font-size:2rem;margin:0;color:var(--brown)}
+.hero-sub{color:var(--gold);font-weight:600;margin-top:6px;margin-bottom:10px}
+.hero-tagline{color:var(--muted);margin-bottom:14px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;border:2px solid transparent;font-weight:700;cursor:pointer;text-decoration:none}
+.btn-primary{background:var(--brown);color:var(--gold);border-color:var(--brown)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(75,46,5,0.12)}
+.btn-outline{background:transparent;color:var(--brown);border-color:var(--brown)}
+.btn-outline:hover{background:var(--brown);color:var(--gold);transform:translateY(-3px)}
+
+/* Section Title */
+.section{padding:42px 0}
+.section-title{text-align:center;font-size:1.6rem;color:var(--brown);margin-bottom:18px}
+
+/* Card main (box principal) */
+.card-main{
+  background: linear-gradient(180deg, var(--white), #fffaf3);
+  border-radius:14px;padding:22px;display:flex;gap:20px;align-items:stretch;box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+/* Subcards inside main card */
+.card-sub{flex:1;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.card-text{padding:6px 8px}
+.card-text h3{margin:8px 0 6px;color:var(--brown);font-size:1.05rem}
+.card-text p{color:#333;margin-bottom:6px}
+.card-media{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;border-left:1px dashed rgba(0,0,0,0.04)}
+.card-media img{width:100%;height:220px;object-fit:cover;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+.media-caption{margin-top:8px;color:var(--muted);font-size:0.9rem;display:flex;align-items:center;gap:8px}
+
+/* Icon inside text */
+.card-icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--orange));display:flex;align-items:center;justify-content:center;color:var(--brown);font-size:1.3rem;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.card-icon.accent{background:linear-gradient(135deg,#ffd9b3,#ffd0a0);color:var(--brown)}
+
+/* Chips */
+.chip{display:inline-block;background:linear-gradient(90deg,var(--gold), #ffd066);color:var(--brown);padding:6px 10px;border-radius:999px;font-weight:600;margin:4px 6px 4px 0;font-size:0.85rem}
+
+/* Checklist */
+.checklist{list-style:none;padding-left:0;margin:8px 0}
+.checklist li{padding-left:26px;position:relative;margin-bottom:8px;color:#333}
+.checklist li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:4px;background:var(--gold);box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+
+/* Market stats */
+.market-stats{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.stat{background:linear-gradient(180deg,#fff,#fff7ec);padding:12px;border-radius:10px;flex:1;min-width:140px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.stat-number{font-weight:800;color:var(--brown);font-size:1.2rem}
+.stat-label{font-size:0.9rem;color:var(--muted)}
+
+/* Contact form */
+.contact-form{width:100%;display:flex;flex-direction:column;gap:10px}
+.input{padding:10px;border-radius:8px;border:1px solid #ddd;background:#fff;font-size:0.95rem}
+.textarea{min-height:110px;resize:vertical}
+.contact-feedback{color:var(--brown);font-size:0.95rem;margin-top:6px}
+
+/* Footer */
+footer{padding:20px 0;background:transparent;border-top:1px solid rgba(0,0,0,0.04)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.footer-left p{margin:0;color:var(--muted);font-size:0.95rem}
+.footer-right a{color:var(--brown);margin-left:12px;font-size:1.1rem}
+
+/* Animations - initial hidden */
+.animate{opacity:0;transform:translateY(18px);transition:all 600ms cubic-bezier(.2,.9,.3,1)}
+
+/* When visible (class added by JS) */
+.is-visible{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width: 980px){
+  .card-main{flex-direction:column}
+  .card-media img{height:180px}
+  .hero-box{flex-direction:column;align-items:center;text-align:center}
+  .hero-left{flex:0 0 auto}
+  .hero-right{padding-top:8px}
+  .header-inner{gap:12px}
+  .nav-links{display:none}
+  .footer-inner{flex-direction:column;gap:12px;text-align:center}
+}
+@media (max-width: 520px){
+  .hero-logo{width:110px;height:110px}
+  .card-media img{height:140px}
+  .section-title{font-size:1.2rem}
+  .hero h1{font-size:1.4rem}
+}
