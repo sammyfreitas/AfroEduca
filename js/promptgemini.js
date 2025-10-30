@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyCTKaEVyHoIxw5XNxi64JEq-y3w90qTRU8";  
+const API_KEY = "";  
 const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + API_KEY;
 
 document.getElementById("gerarBtn").addEventListener("click", async () => {
@@ -51,4 +51,5 @@ respostaDiv.textContent = "⏳ Gerando resumo...";
     respostaDiv.textContent = "❌ Erro ao conectar à API.";
     console.error(error);
   }
+
 });
